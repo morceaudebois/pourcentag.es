@@ -1,69 +1,123 @@
 id = name => document.getElementById(name);
 cl = name => document.getElementsByClassName(name);
 
-
-
-
-
-
 let inputs = document.querySelectorAll(".input");
 let allowed = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", ",", "."];
 
-inputs.forEach(filter);
 
-function filter(input) {
-	input.addEventListener('keypress', function(e) {
-		if (!allowed.includes(e.key)) {
-			event.preventDefault();
-		} 
-	});
+
+
+// Pour remplacer les virgules par des points
+function comReplace(value) {
+	return value.replace(",", ".");
 }
+
+// Pour savoir combien y a de décimales
+Number.prototype.countDecimals = function () {
+    if(Math.floor(this.valueOf()) === this.valueOf()) return 0;
+    return this.toString().split(".")[1].length || 0; 
+}
+
+// Pour limiter les décimales à 6
+function smallerResult(value) {
+	return parseFloat(value.toFixed(6));
+}
+
 
 
 function calculSoldes() {
-	
-}
+	// prend les valeurs et remplace , par .
+	let pourcent = comReplace(id("pourcent").innerText);
+	let total = comReplace(id("total").innerText);
 
-function firstCalc() {
-	let saleId = document.getElementById("sale");
-	// gets the values and replaces , by .
-	let saleContent = (saleId.innerText).replace(",", ".");
+	let reduced = id("reduced");
 
+	if (pourcent && total) {
+		// calcule
+		let reducedVal = total * (pourcent / 100);
 
-
-	let price = (document.getElementById("price").innerText).replace(",", ".");
-	let firstResult = document.getElementById("reducedPrice");
-
-	if (saleContent && price) {
-		let reducedPrice = price * (saleContent / 100);
-
-
-
-		// puts result in place
-		if (reducedPrice) {
-
-			// smaller results
-			reducedPrice = reducedPrice.toFixed(6);
-			//to remove useless zeros at the end
-			reducedPrice = parseFloat(reducedPrice);
-
-
-			firstResult.innerText = reducedPrice;
-
-			// La class pour que ça s'allume
-			firstResult.classList.add("valid");
-		}
-		
-		
-		
+		// limite à 6 décimales
+		reduced.innerText = smallerResult(reducedVal);
+		reduced.classList.add("valid");
 
 	} else {
 		// removes previous result
-		firstResult.innerText = "\u00A0";
-		firstResult.classList.remove("valid");
+		reduced.innerText = "\u00A0";
+		reduced.classList.remove("valid");
 	}
-
 }
+
+
+
+function filterCalc(input) {
+	// filtre les inputs
+	input.addEventListener('keypress', function(e) {
+		if (!allowed.includes(e.key)) {
+			event.preventDefault();
+		}
+	});
+
+	// lance les calculs
+	input.addEventListener('input', function(e) {
+		calculSoldes();
+	});
+}
+
+inputs.forEach(filterCalc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function firstCalc() {
+// 	let saleId = document.getElementById("sale");
+// 	// gets the values and replaces , by .
+// 	let saleContent = (saleId.innerText).replace(",", ".");
+
+// 	let price = (document.getElementById("price").innerText).replace(",", ".");
+// 	let firstResult = document.getElementById("reducedPrice");
+
+// 	if (saleContent && price) {
+// 		let reducedPrice = price * (saleContent / 100);
+
+
+
+// 		// puts result in place
+// 		if (reducedPrice) {
+
+// 			// smaller results
+// 			reducedPrice = reducedPrice.toFixed(6);
+// 			//to remove useless zeros at the end
+// 			reducedPrice = parseFloat(reducedPrice);
+
+
+// 			firstResult.innerText = reducedPrice;
+
+// 			// La class pour que ça s'allume
+// 			firstResult.classList.add("valid");
+// 		}
+		
+		
+		
+
+// 	} else {
+// 		// removes previous result
+// 		firstResult.innerText = "\u00A0";
+// 		firstResult.classList.remove("valid");
+// 	}
+
+// }
 
 function secondCalc() {
 	let partialValue = (document.getElementById("partialValue").innerText).replace(",", ".");

@@ -17,6 +17,16 @@ h1 {
 	font-size: 3em;
 }
 
+
+#pourcent {
+	padding-right: 1em;
+
+	&:after {
+		content: "%";
+		position: absolute;
+	}
+}
+
 .calcul {
 	margin-bottom:  1em;
 	font-size: 30px;
@@ -54,7 +64,7 @@ h1 {
 		color: $base;
 
 		&.valid {
-			border-bottom: 5px solid #efbb35;
+			border-bottom: 5px solid green;
 		}
 	}
 }
