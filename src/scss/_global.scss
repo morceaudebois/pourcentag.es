@@ -1,0 +1,20 @@
+// $variable: #333;
+
+// @font-face {
+//     font-family: '';
+//     src: url('../fonts/.woff2') format('woff2'),
+//         url('../fonts/.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+$background: #1a1d24;
+$base: #fee6c0;
+
+body {
+	margin: 0;
+	background-color: $background;
+	color: $base;
+	font-family: Helvetica Neue;
+	font-weight: 200;
+}

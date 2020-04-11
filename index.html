@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Pourcentage</title>
+	<meta name="description" content="" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+<section id="main">
+	<h1>pourcentage</h1>
+
+	<div class="calcul soldes">
+		<span class="input" maxlength="10" id="sale" placeholder="40%" contenteditable="true" oninput="firstCalc()" ></span>
+		<span> de</span>
+		<span class="input" id="price" placeholder="100" contenteditable="true" oninput="firstCalc()"></span>
+		<span>font </span>
+		<span id="reducedPrice" class="resultat">&nbsp;</span>
+	</div>
+</section>
+
+
+
+<!-- <div class="calcul percentage">
+	<span class="input" id="partialValue" placeholder="26" contenteditable="true" oninput="secondCalc()"></span>
+	<span> représente</span>
+	<span id="percentage" class="resultat">&nbsp;</span>
+	<span> % de </span>
+	<span class="input" id="totalValue" placeholder="120" contenteditable="true" oninput="secondCalc()"></span>
+</div>
+
+<div class="calcul evolution">
+	<span>Il y a une variation de </span>
+	<span id="rate" class="resultat">&nbsp;</span>
+	<span>% entre</span>
+	<span class="input" id="startValue" placeholder="8" contenteditable="true" oninput="thirdCalc()"></span>
+	<span> et </span>
+	<span class="input" id="endValue" placeholder="57" contenteditable="true" oninput="thirdCalc()"></span>
+</div> -->
+
+<script src="src/js/scripts.js"></script>
+</body>
+</html>

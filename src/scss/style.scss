@@ -1,0 +1,62 @@
+@import 'global';
+
+
+
+body {
+	font-size: 1.4em;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	padding-top: 30vh;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+}
+
+.calcul {
+	margin-bottom:  1em;
+	font-size: 30px;
+	text-align: center;
+	
+	.input {
+		display: inline-block;
+		background-color: $base;
+		border-radius: 50px;
+		border: 2px solid $base;
+		color: black;
+		padding: .5em;
+		min-width: 60px;
+
+		&:focus {
+			outline: none;
+			border-color: red;
+
+		}
+	}
+
+	[contenteditable=true]:empty:before {
+		content: attr(placeholder);
+		display: inline-block;
+		color: rgba(0, 0, 0, 0.4);
+		cursor: text;
+	}
+
+	.resultat {
+		display: inline-block;
+		border-bottom: 5px solid $base;
+		transition: border .2s ease-out;
+		padding: .6em;
+		min-width: 60px;
+		color: $base;
+
+		&.valid {
+			border-bottom: 5px solid #efbb35;
+		}
+	}
+}
+
+@import 'media';
