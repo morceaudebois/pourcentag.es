@@ -21,7 +21,13 @@ h1 {
   padding-right: 1em; }
   #pourcent:after {
     content: "%";
-    position: absolute; }
+    position: absolute;
+    color: rgba(0, 0, 0, 0.4); }
+  #pourcent.full:after {
+    color: black; }
+
+.error {
+  border-color: purple !important; }
 
 .calcul {
   margin-bottom: 1em;

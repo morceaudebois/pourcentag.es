@@ -5,8 +5,6 @@ let inputs = document.querySelectorAll(".input");
 let allowed = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", ",", "."];
 
 
-
-
 // Pour remplacer les virgules par des points
 function comReplace(value) {
 	return value.replace(",", ".");
@@ -18,9 +16,53 @@ Number.prototype.countDecimals = function () {
     return this.toString().split(".")[1].length || 0; 
 }
 
-// Pour limiter les décimales à 6
-function smallerResult(value) {
-	return parseFloat(value.toFixed(6));
+
+
+
+
+
+
+// Indication d'erreur quand mauvaise touche
+function error(input) {
+	event.preventDefault();
+	input.classList.add("error");
+	setTimeout(() => { input.classList.remove("error"); }, 150);
+}
+
+function filterCalc(input) {
+
+	// filtre les inputs
+	input.addEventListener('keypress', function(e) {
+		if (!allowed.includes(e.key)) {
+			error(input);
+		//truc compliqué pour empêcher d'avoir plusieurs virgules
+		} else if ((input.innerText.indexOf('.') > -1 || input.innerText.indexOf(',') > -1) && (e.key === "." || e.key === ",")) {
+			error(input);
+		}
+	});
+
+	// à chaque entrée de texte
+	input.addEventListener('input', function(e) {
+
+		// indique si les inputs sont pleins/vides
+		if (input.innerText.length > 0) {
+			input.classList.add("full");
+		} else {
+			input.classList.remove("full");
+		}
+
+		// lance les calculs
+		calculSoldes();
+		calculQuantite()
+	});
+}
+
+inputs.forEach(filterCalc);
+
+function reset(toReset) {
+	// removes previous result
+	toReset.innerText = "\u00A0";
+	toReset.classList.remove("valid");
 }
 
 
@@ -37,122 +79,77 @@ function calculSoldes() {
 		let reducedVal = total * (pourcent / 100);
 
 		// limite à 6 décimales
-		reduced.innerText = smallerResult(reducedVal);
-		reduced.classList.add("valid");
+		smallerResult(reducedVal, false, reduced);
 
+	} else {
+		reset(reduced);
+	}
+}
+
+function calculQuantite() {
+	let quantite = comReplace(id("quantite").innerText);
+	let quantiteTotale = comReplace(id("quantiteTotale").innerText);
+
+	let quantiteResult = id("quantiteResult");
+
+	if (quantite && quantiteTotale) {
+		// calcule
+		let quantiteResultVal = (100 * quantite) / quantiteTotale;
+		
+		// limite à 6 décimales
+		smallerResult(quantiteResultVal, true, quantiteResult);
+
+		
 	} else {
 		// removes previous result
-		reduced.innerText = "\u00A0";
-		reduced.classList.remove("valid");
+		reset(quantiteResult);
 	}
 }
 
 
 
-function filterCalc(input) {
-	// filtre les inputs
-	input.addEventListener('keypress', function(e) {
-		if (!allowed.includes(e.key)) {
-			event.preventDefault();
-		}
-	});
-
-	// lance les calculs
-	input.addEventListener('input', function(e) {
-		calculSoldes();
-	});
+function calcul(type,x,y) {
+	if (type === "solde") {
+		return y * (x / 100);
+	} else if (type === "quant") {
+		return (100 * x) / y;
+	} else if  (type === "evo") {
+		return ((y - x) / x) * 100;
+	}
 }
 
-inputs.forEach(filterCalc);
+// Limite les décimales à 6, ajoute la class valid et inscrit le résultat
+function smallerResult(value, isPercent, resultInput) {
+	let smaller = parseFloat(value.toFixed(6));
+
+	if (isPercent) {
+		resultInput.innerText = smaller + "%";
+	} else {
+		resultInput.innerText = smaller;
+	}
+
+	resultInput.classList.add("valid");
+}
 
 
 
 
 
+// function thirdCalc() {
+// 	let startValue = (document.getElementById("startValue").innerText).replace(",", ".");
+// 	let endValue = (document.getElementById("endValue").innerText).replace(",", ".");
+// 	let thirdResult = document.getElementById("rate");
 
+// 	if (startValue && endValue) {
+// 		let rate = ((endValue - startValue) / startValue) * 100;
 
+// 		rate = rate.toFixed(6);
+// 		rate = parseFloat(rate);
 
-
-
-
-
-
-
-
-
-// function firstCalc() {
-// 	let saleId = document.getElementById("sale");
-// 	// gets the values and replaces , by .
-// 	let saleContent = (saleId.innerText).replace(",", ".");
-
-// 	let price = (document.getElementById("price").innerText).replace(",", ".");
-// 	let firstResult = document.getElementById("reducedPrice");
-
-// 	if (saleContent && price) {
-// 		let reducedPrice = price * (saleContent / 100);
-
-
-
-// 		// puts result in place
-// 		if (reducedPrice) {
-
-// 			// smaller results
-// 			reducedPrice = reducedPrice.toFixed(6);
-// 			//to remove useless zeros at the end
-// 			reducedPrice = parseFloat(reducedPrice);
-
-
-// 			firstResult.innerText = reducedPrice;
-
-// 			// La class pour que ça s'allume
-// 			firstResult.classList.add("valid");
-// 		}
-		
-		
-		
-
+// 		thirdResult.innerText = rate;
+// 		thirdResult.classList.add("valid");
 // 	} else {
-// 		// removes previous result
-// 		firstResult.innerText = "\u00A0";
-// 		firstResult.classList.remove("valid");
+// 		thirdResult.innerText = "\u00A0";
+// 		thirdResult.classList.remove("valid");
 // 	}
-
 // }
-
-function secondCalc() {
-	let partialValue = (document.getElementById("partialValue").innerText).replace(",", ".");
-	let totalValue = (document.getElementById("totalValue").innerText).replace(",", ".");
-	let secondResult = document.getElementById("percentage");
-
-	if (partialValue && totalValue) {
-		let percentage = (100 * partialValue) / totalValue;
-
-		percentage = percentage.toFixed(6);
-		percentage = parseFloat(percentage);
-
-		secondResult.innerText = percentage;
-		secondResult.classList.add("valid");
-	} else {
-		secondResult.innerText = "\u00A0";
-		secondResult.classList.remove("valid");
-	}
-}
-
-function thirdCalc() {
-	let startValue = (document.getElementById("startValue").innerText).replace(",", ".");
-	let endValue = (document.getElementById("endValue").innerText).replace(",", ".");
-	let thirdResult = document.getElementById("rate");
-
-	if (startValue && endValue) {
-		let rate = ((endValue - startValue) / startValue) * 100;
-
-		rate = rate.toFixed(6);
-		rate = parseFloat(rate);
-
-		thirdResult.innerText = rate;
-		thirdResult.classList.add("valid");
-	} else {
-		thirdResult.innerText = "\u00A0";
-		thirdResult.classList.remove("valid");
-	}
-}

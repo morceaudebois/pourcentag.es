@@ -20,12 +20,23 @@ h1 {
 
 #pourcent {
 	padding-right: 1em;
-
+	
 	&:after {
 		content: "%";
 		position: absolute;
+		color: $inputEmpty;
+	}
+
+	&.full:after {
+		color: $inputFull;
 	}
 }
+
+.error {
+	border-color: purple!important;
+}
+
+
 
 .calcul {
 	margin-bottom:  1em;
@@ -34,10 +45,10 @@ h1 {
 	
 	.input {
 		display: inline-block;
-		background-color: $base;
+		background-color: $accent;
 		border-radius: 50px;
-		border: 2px solid $base;
-		color: black;
+		border: 2px solid $accent;
+		color: $inputFull;
 		padding: .5em;
 		min-width: 60px;
 
@@ -51,17 +62,17 @@ h1 {
 	[contenteditable=true]:empty:before {
 		content: attr(placeholder);
 		display: inline-block;
-		color: rgba(0, 0, 0, 0.4);
+		color: $inputEmpty;
 		cursor: text;
 	}
 
 	.resultat {
 		display: inline-block;
-		border-bottom: 5px solid $base;
+		border-bottom: 5px solid $accent;
 		transition: border .2s ease-out;
 		padding: .6em;
 		min-width: 60px;
-		color: $base;
+		color: $accent;
 
 		&.valid {
 			border-bottom: 5px solid green;

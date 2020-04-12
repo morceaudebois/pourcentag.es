@@ -9,12 +9,14 @@
 // }
 
 $background: #1a1d24;
-$base: #fee6c0;
+$accent: #fee6c0;
+$inputEmpty: rgba(0, 0, 0, 0.4);
+$inputFull: black;
 
 body {
 	margin: 0;
 	background-color: $background;
-	color: $base;
+	color: $accent;
 	font-family: Helvetica Neue;
 	font-weight: 200;
 }
