@@ -18,19 +18,7 @@ h1 {
 }
 
 
-#pourcent {
-	padding-right: 1em;
-	
-	&:after {
-		content: "%";
-		position: absolute;
-		color: $inputEmpty;
-	}
 
-	&.full:after {
-		color: $inputFull;
-	}
-}
 
 .error {
 	border-color: purple!important;
@@ -51,6 +39,20 @@ h1 {
 		color: $inputFull;
 		padding: .5em;
 		min-width: 60px;
+
+		&.pourcent {
+			padding-right: 1em;
+			
+			&:after {
+				content: "%";
+				position: absolute;
+				color: $inputEmpty;
+			}
+
+			&.full:after {
+				color: $inputFull;
+			}
+		}
 
 		&:focus {
 			outline: none;

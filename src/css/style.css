@@ -17,15 +17,6 @@ h1 {
   text-align: center;
   font-size: 3em; }
 
-#pourcent {
-  padding-right: 1em; }
-  #pourcent:after {
-    content: "%";
-    position: absolute;
-    color: rgba(0, 0, 0, 0.4); }
-  #pourcent.full:after {
-    color: black; }
-
 .error {
   border-color: purple !important; }
 
@@ -41,6 +32,14 @@ h1 {
     color: black;
     padding: .5em;
     min-width: 60px; }
+    .calcul .input.pourcent {
+      padding-right: 1em; }
+      .calcul .input.pourcent:after {
+        content: "%";
+        position: absolute;
+        color: rgba(0, 0, 0, 0.4); }
+      .calcul .input.pourcent.full:after {
+        color: black; }
     .calcul .input:focus {
       outline: none;
       border-color: red; }

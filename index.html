@@ -14,37 +14,38 @@
 	<h1>pourcentage</h1>
 	
 	<h3>Calcul type soldes</h3>
-	<div class="calcul soldes">
-		<span class="input" maxlength="10" id="pourcent" placeholder="4" contenteditable="true" ></span>
+	<div class="calcul solde">
+		<span class="input pourcent" maxlength="10" id="x" placeholder="4" contenteditable="true" ></span>
 
 		<span> de</span>
 
-		<span class="input" id="total" placeholder="100" contenteditable="true"></span>
+		<span class="input" id="y" placeholder="100" contenteditable="true"></span>
 
 		<span>font </span>
 
-		<span id="reduced" class="resultat">&nbsp;</span>
+		<span id="resultat" class="resultat">&nbsp;</span>
 	</div>
 </section>
 
 
 <h3>Calcul de quantité</h3>
-<div class="calcul percentage">
-	<span class="input" id="quantite" placeholder="26" contenteditable="true"></span>
+<div class="calcul quant">
+	<span class="input" id="x" placeholder="26" contenteditable="true"></span>
 	<span> représente</span>
-	<span id="quantiteResult" class="resultat">%</span>
+	<span id="resultat" class="resultat">%</span>
 	<span>de </span>
-	<span class="input" id="quantiteTotale" placeholder="120" contenteditable="true"></span>
+	<span class="input" id="y" placeholder="120" contenteditable="true"></span>
 </div>
 
-<!-- <div class="calcul evolution">
+<h3>Calcul d'évolution</h3>
+<div class="calcul evo">
 	<span>Il y a une variation de </span>
-	<span id="rate" class="resultat">&nbsp;</span>
+	<span id="resultat" class="resultat">&nbsp;</span>
 	<span>% entre</span>
-	<span class="input" id="startValue" placeholder="8" contenteditable="true" oninput="thirdCalc()"></span>
+	<span class="input" id="x" placeholder="8" contenteditable="true"></span>
 	<span> et </span>
-	<span class="input" id="endValue" placeholder="57" contenteditable="true" oninput="thirdCalc()"></span>
-</div> -->
+	<span class="input" id="y" placeholder="57" contenteditable="true"></span>
+</div>
 
 <script src="src/js/scripts.js"></script>
 </body>
