@@ -14,7 +14,7 @@ function error(input) {
 }
 
 function launcher(input) {
-	const allowed = RegExp(/[0-9,\.]/g);
+	const allowed = RegExp("[0-9,\.]");
  
 	// filtre les inputs
 	input.addEventListener('keypress', function(e) {
@@ -24,16 +24,18 @@ function launcher(input) {
 		//truc compliqué pour empêcher d'avoir plusieurs virgules
 		} else if ((input.innerText.indexOf('.') > -1 || input.innerText.indexOf(',') > -1) && (e.key === "." || e.key === ",")) {
 			error(input);
+		} else if (this.innerText.length > 24) {
+			error(input);
 		}
 	});
 
+	// filtre les copiés collés
 	input.addEventListener('paste', function(event) {
 
 		event.preventDefault();
-        event.stopPropagation()	
+        event.stopPropagation();
 
         const pastedText = event.clipboardData.getData('text');
-        console.log(pastedText);
         let numbersOnly = pastedText.replace(/[^0-9,\.]/g, '');
 
 		let dotCount = (numbersOnly.match(/\./g) || []).length;
@@ -49,7 +51,7 @@ function launcher(input) {
 			dotCount = (numbersOnly.match(/\./g) || []).length;
 			commaCount = (numbersOnly.match(/,/g) || []).length;
 			sum = dotCount + commaCount;
-		} //bite
+		}
 
         input.innerText = numbersOnly;
 
@@ -67,7 +69,7 @@ function launcher(input) {
 			input.classList.remove("full");
 		}
 
-		// lance le calculs
+		// lance le calcul
 		processor(input);
 	});
 }
@@ -115,7 +117,14 @@ function processResult(value, isPercent, resultInput) {
 		resultInput.innerText = result;
 	}
 
-	resultInput.classList.add("valid");
+	console.log(result);
+
+	if (result === Infinity) {
+		resultInput.classList.add("invalid");
+	} else {
+		resultInput.classList.add("valid");
+	}
+	
 }
 
 // Pour savoir combien y a de décimales
@@ -127,6 +136,7 @@ Number.prototype.countDecimals = function () {
 function reset(toReset) {
 	// removes previous result
 	toReset.innerText = "\u00A0";
+	toReset.classList.remove("invalid");
 	toReset.classList.remove("valid");
 }
 

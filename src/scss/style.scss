@@ -79,6 +79,10 @@ h1 {
 		&.valid {
 			border-bottom: 5px solid green;
 		}
+
+		&.invalid {
+			border-bottom: 5px solid red;
+		}
 	}
 }
 
