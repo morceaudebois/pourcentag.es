@@ -14,17 +14,48 @@ function error(input) {
 }
 
 function launcher(input) {
-
+	const allowed = RegExp(/[0-9,\.]/g);
+ 
 	// filtre les inputs
 	input.addEventListener('keypress', function(e) {
-		const allowed = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", ",", "."];
 
-		if (!allowed.includes(e.key)) {
+		if (!allowed.test(e.key)) {
 			error(input);
 		//truc compliqué pour empêcher d'avoir plusieurs virgules
 		} else if ((input.innerText.indexOf('.') > -1 || input.innerText.indexOf(',') > -1) && (e.key === "." || e.key === ",")) {
 			error(input);
 		}
+	});
+
+	input.addEventListener('paste', function(event) {
+
+		event.preventDefault();
+        event.stopPropagation()	
+
+        const pastedText = event.clipboardData.getData('text');
+        console.log(pastedText);
+        let numbersOnly = pastedText.replace(/[^0-9,\.]/g, '');
+
+		let dotCount = (numbersOnly.match(/\./g) || []).length;
+		let commaCount = (numbersOnly.match(/,/g) || []).length;
+		let sum = dotCount + commaCount;
+
+		while (sum > 1) {
+			let i = 0;
+
+			numbersOnly = numbersOnly.replace(/\./g, m  => !i++ ? m : '');
+			numbersOnly = numbersOnly.replace(/,/g, m  => !i++ ? m : '');
+
+			dotCount = (numbersOnly.match(/\./g) || []).length;
+			commaCount = (numbersOnly.match(/,/g) || []).length;
+			sum = dotCount + commaCount;
+		} //bite
+
+        input.innerText = numbersOnly;
+
+        if (numbersOnly === "") {
+        	error(input);
+        }
 	});
 
 	// à chaque entrée de texte
