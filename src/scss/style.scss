@@ -1,24 +1,81 @@
 @import 'global';
 
 
-
-body {
-	font-size: 1.4em;
+#logo {
+	padding-top: 4em;
+	max-width: 600px;
+	margin: auto;
+	display: block;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
 }
 
-#main {
-	display: flex;
-	flex-direction: column;
-	padding-top: 30vh;
+section {
+	display: block;
+	margin: auto;
+	margin-top: 6em;
+	max-width: 500px;
+	background-color: $baseBg;
+	border-radius: 40px;
+	padding: 2em;
+	background: linear-gradient(250deg, #F1F4FF 19.14%, #F9FAFF 154.68%);
+	box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.3), -16px -16px 40px rgba(255, 255, 255, 0.8), inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+
+	h3 {
+		margin-top: .5em;
+		text-align: center;
+		font-size: 1.5em;
+		letter-spacing: .075em;
+	}
+
+	.calcul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.25em;
+
+		span {
+			padding: 1em;
+		}
+
+		.input {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			
+			min-width: 5em;
+			line-height: 1.5em;
+
+			border-radius: 50px;
+			background: linear-gradient(250deg, #F1F4FF 19.14%, #F9FAFF 154.68%);
+
+			box-shadow: inset 3px 3px 7px rgba(0,0,0,.1), -3px -3px 7px rgb(243,243,243);
+
+			&.pourcent {
+				padding-right: 1em;
+				
+				&:after {
+					content: "%";
+					position: absolute;
+					color: yellow;
+				}
+
+				&.full:after {
+					color: pink;
+				}
+			}
+
+			&:focus {
+				outline: none;
+				border-color: red;
+
+			}
+		}
+	}
 }
-
-h1 {
-	text-align: center;
-	font-size: 3em;
-}
-
-
-
 
 .error {
 	border-color: purple!important;
@@ -26,7 +83,7 @@ h1 {
 
 .resultat:before {
 	display: inline-block;
-	color: $accent;
+	color: red;
     opacity: .5;
 }
 
@@ -46,65 +103,124 @@ h1 {
 	display: none;
 }
 
+[contenteditable=true]:empty:before {
+	content: attr(placeholder);
+	display: inline-block;
+	color: orange;
+	cursor: text;
+}
 
-.calcul {
-	margin-bottom:  1em;
-	font-size: 30px;
-	text-align: center;
-	
-	.input {
-		display: inline-block;
-		background-color: $accent;
-		border-radius: 50px;
-		border: 2px solid $accent;
-		color: $inputFull;
-		padding: .5em;
-		min-width: 60px;
+footer {
+	padding-top: 5em;
 
-		&.pourcent {
-			padding-right: 1em;
-			
-			&:after {
-				content: "%";
-				position: absolute;
-				color: $inputEmpty;
-			}
-
-			&.full:after {
-				color: $inputFull;
-			}
-		}
-
-		&:focus {
-			outline: none;
-			border-color: red;
-
-		}
-	}
-
-	[contenteditable=true]:empty:before {
-		content: attr(placeholder);
-		display: inline-block;
-		color: $inputEmpty;
-		cursor: text;
-	}
-
-	.resultat {
-		display: inline-block;
-		border-bottom: 5px solid $accent;
-		transition: border .2s ease-out;
-		padding: .6em;
-		min-width: 60px;
-		color: $accent;
-
-		&.valid {
-			border-bottom: 5px solid green;
-		}
-
-		&.invalid {
-			border-bottom: 5px solid red;
-		}
+	p {
+		text-align: center;
 	}
 }
+
+// body {
+// 	font-size: 1.4em;
+// }
+
+// #main {
+// 	display: flex;
+// 	flex-direction: column;
+// 	padding-top: 30vh;
+// }
+
+// h1 {
+// 	text-align: center;
+// 	font-size: 3em;
+// }
+
+
+
+
+// .error {
+// 	border-color: purple!important;
+// }
+
+// .resultat:before {
+// 	display: inline-block;
+// 	color: $accent;
+//     opacity: .5;
+// }
+
+// .quant .resultat:before {
+// 	content: "20%";
+// }
+
+// .solde .resultat:before {
+// 	content: "8";
+// }
+
+// .evo .resultat:before {
+// 	content: "100%";
+// }
+
+// .resultat.hidePh:before {
+// 	display: none;
+// }
+
+
+// .calcul {
+// 	margin-bottom:  1em;
+// 	font-size: 30px;
+// 	text-align: center;
+	
+// 	.input {
+// 		display: inline-block;
+// 		background-color: $accent;
+// 		border-radius: 50px;
+// 		border: 2px solid $accent;
+// 		color: $inputFull;
+// 		padding: .5em;
+// 		min-width: 60px;
+
+// 		&.pourcent {
+// 			padding-right: 1em;
+			
+// 			&:after {
+// 				content: "%";
+// 				position: absolute;
+// 				color: $inputEmpty;
+// 			}
+
+// 			&.full:after {
+// 				color: $inputFull;
+// 			}
+// 		}
+
+// 		&:focus {
+// 			outline: none;
+// 			border-color: red;
+
+// 		}
+// 	}
+
+// 	[contenteditable=true]:empty:before {
+// 		content: attr(placeholder);
+// 		display: inline-block;
+// 		color: $inputEmpty;
+// 		cursor: text;
+// 	}
+
+// 	.resultat {
+// 		display: inline-block;
+// 		border-bottom: 5px solid $accent;
+// 		transition: border .2s ease-out;
+// 		padding: .6em;
+// 		min-width: 60px;
+// 		color: $accent;
+
+// 		&.valid {
+// 			border-bottom: 5px solid green;
+// 		}
+
+// 		&.invalid {
+// 			border-bottom: 5px solid red;
+// 		}
+// 	}
+// }
 
 @import 'media';

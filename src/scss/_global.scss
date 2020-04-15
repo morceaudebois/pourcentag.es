@@ -8,15 +8,46 @@
 //     font-style: normal;
 // }
 
-$background: #1a1d24;
-$accent: #fee6c0;
-$inputEmpty: rgba(0, 0, 0, 0.4);
-$inputFull: black;
+@font-face {
+    font-family: 'Futura Regular';
+    src: url('../fonts/Futura-Regular.woff2') format('woff2'),
+        url('../fonts/Futura-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../fonts/Futura-Medium.woff2') format('woff2'),
+        url('../fonts/Futura-Medium.woff') format('woff');
+    font-weight: medium;
+    font-style: medium;
+}
+
+$baseBg: #f6f8ff;
+$baseFt: #5C6972;
 
 body {
 	margin: 0;
-	background-color: $background;
-	color: $accent;
-	font-family: Helvetica Neue;
-	font-weight: 200;
+	background-color: $baseBg;
+	color: $baseFt;
+	font-family: Futura Regular;
+	letter-spacing: .05em;
 }
+
+::selection { background: #ba77b6; color: white; }
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+}
+
+h2 {
+	text-align: center;
+}
+
+
