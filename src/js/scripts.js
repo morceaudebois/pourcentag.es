@@ -83,6 +83,13 @@ function processor(input) {
 
 	let zInput = parent.querySelector("#resultat");
 
+	// cache le placeholder du résultat quand il y au moins une entrée
+	if (x || y) {
+		zInput.classList.add("hidePh");
+	} else {
+		zInput.classList.remove("hidePh");
+	}
+
 	if (parent.classList.contains("solde")) {
 		// si les deux inputs sont pleins
 		if (x && y) {
@@ -100,7 +107,7 @@ function processor(input) {
 		}
 	} else if (parent.classList.contains("evo")) {
 		if (x && y) {
-			processResult(calcul("evo", x, y), false, zInput);
+			processResult(calcul("evo", x, y), true, zInput);
 		} else {
 			reset(zInput);
 		}
@@ -136,8 +143,7 @@ Number.prototype.countDecimals = function () {
 function reset(toReset) {
 	// removes previous result
 	toReset.innerText = "\u00A0";
-	toReset.classList.remove("invalid");
-	toReset.classList.remove("valid");
+	toReset.classList.remove("invalid", "valid");
 }
 
 // des belles mathématiques

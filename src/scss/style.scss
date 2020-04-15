@@ -24,6 +24,27 @@ h1 {
 	border-color: purple!important;
 }
 
+.resultat:before {
+	display: inline-block;
+	color: $accent;
+    opacity: .5;
+}
+
+.quant .resultat:before {
+	content: "20%";
+}
+
+.solde .resultat:before {
+	content: "8";
+}
+
+.evo .resultat:before {
+	content: "100%";
+}
+
+.resultat.hidePh:before {
+	display: none;
+}
 
 
 .calcul {
