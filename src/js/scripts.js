@@ -10,7 +10,7 @@ function comReplace(value) {
 function error(input) {
 	event.preventDefault();
 	input.classList.add("error");
-	setTimeout(() => { input.classList.remove("error"); }, 150);
+	setTimeout(() => { input.classList.remove("error"); }, 125);
 }
 
 function launcher(input) {
@@ -97,19 +97,19 @@ function processor(input) {
 			processResult(calcul("solde", x, y), false, zInput);
 		} else {
 			// reset quand les inputs sont vides
-			reset(zInput);
+			reset(zInput,x,y);
 		}
 	} else if (parent.classList.contains("quant")) {
 		if (x && y) {
 			processResult(calcul("quant", x, y), true, zInput);
 		} else {
-			reset(zInput);
+			reset(zInput,x,y);
 		}
 	} else if (parent.classList.contains("evo")) {
 		if (x && y) {
 			processResult(calcul("evo", x, y), true, zInput);
 		} else {
-			reset(zInput);
+			reset(zInput,x,y);
 		}
 	}
 }
@@ -124,9 +124,7 @@ function processResult(value, isPercent, resultInput) {
 		resultInput.innerText = result;
 	}
 
-	console.log(result);
-
-	if (result === Infinity) {
+	if (result === Infinity || isNaN(result)) {
 		resultInput.classList.add("invalid");
 	} else {
 		resultInput.classList.add("valid");
@@ -140,9 +138,16 @@ Number.prototype.countDecimals = function () {
     return this.toString().split(".")[1].length || 0; 
 }
 
-function reset(toReset) {
-	// removes previous result
-	toReset.innerText = "\u00A0";
+// removes previous result
+function reset(toReset, x, y) {
+	// si un seul champ
+	if (!x && y || x && !y) {
+		toReset.innerText = "\u00A0";
+	// si tout est vide
+	} else if (!x && !y) {
+		toReset.innerText = "";
+	}
+
 	toReset.classList.remove("invalid", "valid");
 }
 

@@ -14,31 +14,53 @@
 }
 
 section {
-	display: block;
+	// display: flex;
+	// flex-direction: column;
+	// box-sizing: border-box;
+
+	// transform: scale(1.1);
+
+	max-width: 800px;
+
 	margin: auto;
 	margin-top: 6em;
-	max-width: 500px;
 	background-color: $baseBg;
 	border-radius: 40px;
 	padding: 2em;
 	background: linear-gradient(250deg, #F1F4FF 19.14%, #F9FAFF 154.68%);
-	box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.3), -16px -16px 40px rgba(255, 255, 255, 0.8), inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+	box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.3),
+				-16px -16px 40px rgba(255, 255, 255, 0.8),
+				inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+	min-width: 300px;
+	transition: width 2s linear;
 
 	h3 {
-		margin-top: .5em;
+		margin-block-start: 0em;
 		text-align: center;
 		font-size: 1.5em;
 		letter-spacing: .075em;
 	}
 
+	span {
+		margin-top: .5em;
+    	margin-bottom: .5em;
+	}
+
 	.calcul {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: table;
+		text-align: center;
+		margin: auto;
 		font-size: 1.25em;
 
 		span {
-			padding: 1em;
+			padding: .75em;
+
+			&[contenteditable=true]:empty:before {
+				content: attr(placeholder);
+				display: inline-block;
+				color: rgba(92, 105, 114, .5);
+				cursor: text;
+			}
 		}
 
 		.input {
@@ -52,7 +74,39 @@ section {
 			border-radius: 50px;
 			background: linear-gradient(250deg, #F1F4FF 19.14%, #F9FAFF 154.68%);
 
-			box-shadow: inset 3px 3px 7px rgba(0,0,0,.1), -3px -3px 7px rgb(243,243,243);
+			box-shadow: inset 3px 3px 7px rgba(0,0,0,.1),
+						-3px -3px 7px rgb(243,243,243);
+
+			transition: all 1s;
+
+			position: relative;
+			
+			&::after {
+				background-color: yellow;
+				display: block;
+				content: '';
+				border-radius: 50px;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				z-index: -2;
+				border-radius: 50px;
+				bottom: 0px;
+				left:0px;
+				box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+				transition: opacity 0.3s ease-in-out;
+				// transform: translate(-50%);
+				pointer-events: none;
+			}
+
+			&:hover {
+				transition: all 1s;
+	    		&::after {
+					opacity: 1;
+					z-index: 1;
+	    		}
+	    	}
 
 			&.pourcent {
 				padding-right: 1em;
@@ -60,55 +114,100 @@ section {
 				&:after {
 					content: "%";
 					position: absolute;
-					color: yellow;
+					color: rgba(92, 105, 114, .5);
 				}
 
 				&.full:after {
-					color: pink;
+					color: $baseFt;
 				}
 			}
 
 			&:focus {
 				outline: none;
 				border-color: red;
+			}
 
+			
+
+			&.error {
+				background: radial-gradient(circle, rgba(229,26,26,0.8) -1%, rgba(229,26,26,1) 100%)!important;
+				box-shadow: 0px 4px 16px rgba(255, 30, 28, 0.5), inset -2px 0px 2px rgba(96, 18, 0, 0.1);
+				color: $baseBg;
+
+				&:after, &[contenteditable=true]:empty:before {
+					color: rgba(246, 248, 255, .6);
+				}
+
+				&.full:after {
+					color: $baseBg;
+				}
+			}
+		}
+
+		
+
+		&.quant .resultat:before {
+			content: "20%";
+		}
+
+		&.solde .resultat:before {
+			content: "8";
+		}
+
+		&.evo .resultat:before {
+			content: "100%";
+		}
+
+		&.evo #phrase {
+			width: 210px;
+			padding-left: 0px;
+		}
+
+		
+		
+
+		.resultat {
+			position: relative;
+			
+
+			&:after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 3px;
+				display: block;
+				background-color: $baseFt;
+			    bottom: 3px;
+			    left: 50%;
+			    border-radius: 50px;
+				transform: translate(-50%);
+			}
+
+			&:before {
+				display: inline-block;
+				color: $baseFt;
+			    opacity: .5;
+			}
+
+			&.valid:after {
+				background-color: $green;
+			}
+
+			&.invalid:after {
+				background-color: $red;
+			}
+
+			&.hidePh:before {
+				display: none;
 			}
 		}
 	}
 }
 
-.error {
-	border-color: purple!important;
-}
 
-.resultat:before {
-	display: inline-block;
-	color: red;
-    opacity: .5;
-}
 
-.quant .resultat:before {
-	content: "20%";
-}
 
-.solde .resultat:before {
-	content: "8";
-}
 
-.evo .resultat:before {
-	content: "100%";
-}
-
-.resultat.hidePh:before {
-	display: none;
-}
-
-[contenteditable=true]:empty:before {
-	content: attr(placeholder);
-	display: inline-block;
-	color: orange;
-	cursor: text;
-}
 
 footer {
 	padding-top: 5em;
