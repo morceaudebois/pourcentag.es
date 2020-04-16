@@ -58,7 +58,8 @@ section {
 			&[contenteditable=true]:empty:before {
 				content: attr(placeholder);
 				display: inline-block;
-				color: rgba(92, 105, 114, .5);
+				// color: rgba(92, 105, 114, .5);
+				color: pink;
 				cursor: text;
 			}
 		}
@@ -70,41 +71,49 @@ section {
 			
 			min-width: 5em;
 			line-height: 1.5em;
-
+	
 			border-radius: 50px;
 			background: linear-gradient(250deg, #F1F4FF 19.14%, #F9FAFF 154.68%);
 
 			box-shadow: inset 3px 3px 7px rgba(0,0,0,.1),
 						-3px -3px 7px rgb(243,243,243);
 
-			transition: all 1s;
-
 			position: relative;
-			
-			&::after {
-				background-color: yellow;
-				display: block;
+
+			@include transition;
+
+			> div {
+				background-color: purple;
+				display: inline;
+				position: absolute;
+			}
+
+			&::before {
 				content: '';
 				border-radius: 50px;
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				opacity: 0;
-				z-index: -2;
+				opacity: 1;
 				border-radius: 50px;
 				bottom: 0px;
-				left:0px;
-				box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-				transition: opacity 0.3s ease-in-out;
-				// transform: translate(-50%);
+				left: 0px;
+
+				box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.2),
+				-16px -16px 40px rgba(255, 255, 255, 0.8),
+				inset -8px -6px 80px rgba(255, 255, 255, 0.10);
+				
+				@include transition;
+
 				pointer-events: none;
 			}
 
-			&:hover {
-				transition: all 1s;
-	    		&::after {
+			&:focus {
+				box-shadow: none;
+
+	    		&:before {
+	    			@include transition;
 					opacity: 1;
-					z-index: 1;
 	    		}
 	    	}
 

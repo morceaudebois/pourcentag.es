@@ -24,6 +24,11 @@
     font-style: medium;
 }
 
+@mixin transition {
+    transition-property: opacity, box-shadow;
+    transition-duration: .2s;
+}
+
 $baseBg: #f6f8ff;
 $baseFt: #5C6972;
 $red: #E51A1A;
