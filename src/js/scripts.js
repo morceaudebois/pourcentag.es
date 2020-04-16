@@ -29,6 +29,18 @@ function launcher(input) {
 		}
 	});
 
+	// Ajoute le focus à la section
+	input.addEventListener("focus", function(input) {
+		let parent = input.target.parentNode.parentNode;
+		parent.classList.add("focus");
+	});
+
+	// Retire le focus à la section
+	input.addEventListener("focusout", function(input) { 
+		let parent = input.target.parentNode.parentNode;
+		parent.classList.remove("focus");
+	});
+
 	// filtre les copiés collés
 	input.addEventListener('paste', function(event) {
 
@@ -162,6 +174,8 @@ function calcul(type,x,y) {
 			return ((y - x) / x) * 100;
 	}
 }
+
+
 
 let inputs = document.querySelectorAll(".input");
 inputs.forEach(launcher);

@@ -26,7 +26,7 @@
 
 @mixin transition {
     transition-property: background, opacity, box-shadow;
-    transition-duration: .2s;
+    transition-duration: .15s;
 }
 
 $baseBg: #f6f8ff;
