@@ -17,11 +17,11 @@
 }
 
 @font-face {
-    font-family: 'Futura Medium';
-    src: url('../fonts/Futura-Medium.woff2') format('woff2'),
-        url('../fonts/Futura-Medium.woff') format('woff');
-    font-weight: medium;
-    font-style: medium;
+    font-family: 'DS Digital';
+    src: url('../fonts/ds-digital-bold_allfont.net-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digital-bold_allfont.net-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @mixin transition {
