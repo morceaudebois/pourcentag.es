@@ -1,0 +1,72 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $nightBg;
+        color: $nightFt;
+    }
+
+    section {
+        background: linear-gradient(144.05deg, #32383E -69.07%, #17191C 122.22%);
+
+		box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.4),
+				 -4px -2px 16px rgba(195, 200, 205, 0.05),
+				 inset -8px -6px 80px rgba(0, 0, 0, 0.18);
+
+		border: 1px solid rgba(80, 89, 98, .1);
+
+		.calcul {
+			span {
+				padding: .75em;
+
+				&[contenteditable=true]:empty:before {
+					color: $nightPh;
+				}
+			}
+
+			.input {
+				background: linear-gradient(144.05deg, #32383E -69.07%, #17191C 122.22%);
+
+				box-shadow: //invisible pour transition
+							4px 4px 18px rgba(0, 0, 0, 0),
+					 		-4px -2px 16px rgba(195, 200, 205, 0),
+
+							inset 2px 3px 10px #070709,
+							inset -2px -2px 10px rgba(255, 255, 255, 0.05);
+
+
+				&:focus {
+					box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.4),
+					 -4px -2px 16px rgba(195, 200, 205, 0.1),
+					 inset -8px -6px 80px rgba(0, 0, 0, 0.18),
+					 //invisible pour transition
+					 inset -2px -2px 10px rgba(255, 255, 255, 0);
+				}
+
+				&.pourcent {
+					&:after {
+						color: $nightPh;
+					}
+
+					&.full:after {
+						color: $baseFt;
+					}
+				}
+			}
+
+			.resultat {
+				&:after {
+					background-color: $nightPh;
+				}
+
+				&:before {
+					color: $nightPh;
+				}
+			}
+		}
+    }
+
+    footer {
+		.compteur {
+			box-shadow: inset 0px 1px 4px rgba(74,81,70,.5);
+		}
+	}
+}

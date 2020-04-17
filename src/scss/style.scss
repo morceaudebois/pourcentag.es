@@ -26,6 +26,7 @@ section {
 	box-shadow: 16px 4px 64px rgba(18, 61, 101, 0.3),
 				-16px -16px 40px rgba(255, 255, 255, 0.8),
 				inset -8px -6px 80px rgba(255, 255, 255, 0.18);
+	border: 1px solid rgba(205, 212, 219, .8);
 	min-width: 300px;
 
 	h3 {
@@ -52,7 +53,7 @@ section {
 			&[contenteditable=true]:empty:before {
 				content: attr(placeholder);
 				display: inline-block;
-				color: rgba(92, 105, 114, .5);
+				color: $basePh;
 				cursor: text;
 			}
 		}
@@ -91,7 +92,7 @@ section {
 				&:after {
 					content: "%";
 					position: absolute;
-					color: rgba(92, 105, 114, .5);
+					color: $basePh;
 				}
 
 				&.full:after {
@@ -145,7 +146,7 @@ section {
 				width: 100%;
 				height: 3px;
 				display: block;
-				background-color: $baseFt;
+				background-color: $basePh;
 			    bottom: 3px;
 			    left: 50%;
 			    border-radius: 50px;
@@ -154,16 +155,19 @@ section {
 
 			&:before {
 				display: inline-block;
-				color: $baseFt;
-			    opacity: .5;
+				color: $basePh;
 			}
 
 			&.valid:after {
 				background-color: $green;
+				box-shadow: 0.6px 0.6px 5px rgba(145, 227, 105, 0.9),
+							inset -0.2px -0.2px 0.4px rgba(46, 68, 87, 0.2);
 			}
 
 			&.invalid:after {
 				background-color: $red;
+				box-shadow: 0.6px 0.6px 9px rgba(229, 26, 26, .8),
+							inset -0.2px -0.2px 0.4px rgba(46, 68, 87, 0.2);;
 			}
 
 			&.hidePh:before {
