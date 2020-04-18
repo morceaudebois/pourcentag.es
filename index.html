@@ -12,8 +12,10 @@
 <body>
 <?php include "counter.php"; ?>
 
-
-<img src="src/images/logo.svg" id="logo" alt="logo">
+<picture id="logo">
+	<source srcset="src/images/nightlogo.svg" media="(prefers-color-scheme: dark)" />
+	<img src="src/images/logo.svg"  alt="logo">
+</picture>
 
 <h2>Calcul de pourcentages simple et efficace</h2>
 
@@ -58,7 +60,7 @@
 <footer>
 	<p>Vous êtes le visiteur n°</p>
 	<div class="compteur"><span><?= $count ?></span></div>
-	<p>pourcentag.es est une expérience neuomorphique, un mariage d’interfaces du passé et du présent.<br>
+	<p>pourcentag.es est une expérience <a href="https://dribbble.com/tags/neomorphism" target="_blank">neuomorphique</a>, un mariage d’interfaces du <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">passé</a> et du <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">présent</a>.<br>
 	Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez m’offrir un café. ☕️</p>
 </footer>
 <script src="src/js/scripts.js"></script>

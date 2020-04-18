@@ -68,5 +68,9 @@
 		.compteur {
 			box-shadow: inset 0px 1px 4px rgba(74,81,70,.5);
 		}
+
+		p a {
+			color: $nightFt;
+		}
 	}
 }
