@@ -5,10 +5,12 @@
 	<meta name="description" content="" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	
 	<link rel="stylesheet" href="src/css/style.css">
+
 </head>
 <body>
+<?php include "counter.php"; ?>
 
 
 <img src="src/images/logo.svg" id="logo" alt="logo">
@@ -55,10 +57,11 @@
 
 <footer>
 	<p>Vous êtes le visiteur n°</p>
-	<div class="compteur"><span>69420</span></div>
+	<div class="compteur"><span><?= $count ?></span></div>
 	<p>pourcentag.es est une expérience neuomorphique, un mariage d’interfaces du passé et du présent.<br>
 	Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez m’offrir un café. ☕️</p>
 </footer>
 <script src="src/js/scripts.js"></script>
+
 </body>
 </html>
