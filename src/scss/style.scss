@@ -210,7 +210,7 @@ footer {
 			left: 0px;
 			bottom: 0px;
 			font-size: 2.5em;
-			color: #383A37;
+			color: $baseCt;
 			opacity: .11;
 			position: absolute;
 			width: 100%;
@@ -225,7 +225,7 @@ footer {
 			padding-left: 36px;
 			font-family: 'DS Digital';
 			font-size: 2.5em;
-			color: #383A37;
+			color: $baseCt;
 			opacity: 0.9;
 		}
 	}
