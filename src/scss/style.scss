@@ -1,6 +1,5 @@
 @import 'global';
 
-
 #logo {
 	padding-top: 4em;
 	max-width: 600px;
@@ -139,6 +138,8 @@ section {
 
 		.resultat {
 			position: relative;
+			min-width: 50px;
+    		display: inline-block;
 			
 			&:after {
 				content: "";
@@ -255,6 +256,10 @@ footer {
 		&:active {
 			opacity: .65;
 		}
+
+		svg path {
+			fill: $baseFt;
+		}
 	}
 
 	#link {
@@ -265,6 +270,5 @@ footer {
 		margin: auto;
 	}
 }
-
 
 @import 'media';

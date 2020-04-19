@@ -95,5 +95,112 @@
 		p a {
 			color: $nightFt;
 		}
+
+		a svg path {
+			fill: $nightFt;
+		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	#logo {
+		padding-top: 2em;
+		max-width: 400px;
+	}
+
+	h2 {
+		font-size: 1.2em;
+		margin: .6em 0;
+	}
+
+	section {
+		max-width: 600px;
+		padding: 1.5em;
+		margin-top: 3em;
+
+		h3 {
+			font-size: 1.25em;
+		}
+
+		.calcul {
+			font-size: 1em;
+
+			span {
+				padding: .5em;
+			}
+
+			.input {
+				min-width: 3.5em;
+			}
+		}
+	}
+
+	footer {
+		padding: 3em 0;
+
+		.compteur {
+			margin-bottom: 3em;
+		}
+
+		p {
+			font-size: .85em;
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	h2 {
+		font-size: 1em;
+		margin: .6em 0;
+	}
+
+	section {
+		margin-top: 2em;
+		padding: 1.5em .5em;
+
+		.calcul {
+			span {
+				padding: .3em;
+			}
+
+			.input {
+				min-width: 3em;
+			}
+
+			.resultat {
+				position: relative;
+				
+				&:after {
+				    bottom: -1px;
+				}
+			}
+
+			&.evo .input {
+				margin-top: 1em;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
