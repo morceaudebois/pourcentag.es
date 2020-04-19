@@ -183,7 +183,7 @@ section {
 }
 
 footer {
-	padding-top: 5em;
+	padding: 5em 0;
 
 	.compteur {
 		margin: auto;
@@ -232,10 +232,37 @@ footer {
 
 	p {
 		text-align: center;
+		line-height: 1.7em;
+		margin: .5em 0;
 
 		a {
+			text-decoration: none;
+			padding-bottom: 3px;
 			color: $baseFt;
+			text-decoration: none;
+			background-image: linear-gradient(transparent, transparent),linear-gradient(transparent, transparent),linear-gradient(to right, #D087C9, #5961F9);
+			background-repeat: no-repeat;
+			background-position: 120%, 122%, 0 130%;
+			background-size: 100% .4em;
 		}
+	}
+
+	a {
+		&:hover {
+			opacity: .8;
+		}
+
+		&:active {
+			opacity: .65;
+		}
+	}
+
+	#link {
+		display: block;
+		position: relative;
+		top: 1em;
+		width: 18px;
+		margin: auto;
 	}
 }
 

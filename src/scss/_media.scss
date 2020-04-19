@@ -39,7 +39,13 @@
 					 inset -8px -6px 80px rgba(0, 0, 0, 0.18),
 					 //invisible pour transition
 					 inset -2px -2px 10px rgba(255, 255, 255, 0);
+
+
 				}
+
+				&.error {
+				 	box-shadow: 0px 1px 20px rgba(255, 30, 28, 0.8), inset -2px 0px 2px rgba(96, 18, 0, 0.1);
+				 }
 
 				&.pourcent {
 					&:after {
@@ -60,13 +66,19 @@
 				&:before {
 					color: $nightPh;
 				}
+
+				&.valid:after {
+					background-color: $nightCt;
+					box-shadow: 0.6px 0.6px 5px rgba(4, 181, 167, 1),
+								inset -0.2px -0.2px 0.4px rgba(46, 68, 87, 0.2);
+				}
 			}
 		}
     }
 
     footer {
 		.compteur {
-			box-shadow: inset 0px 1px 4px rgba(4, 29, 34, 1);
+			box-shadow: inset 0px 1px 4px rgba(3, 19, 22, 1);
 			background: linear-gradient(-60deg, #04252D 19.14%, #072E37 154.68%);
 
 			span {
