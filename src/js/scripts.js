@@ -228,10 +228,10 @@ function lang() {
 					traduit = "of";
 					break;
 				case 'font':
-					traduit = "equal to";
+					traduit = "is";
 					break;
 				case 'représente':
-					traduit = "represents";
+					traduit = "is";
 					break;
 				case 'Il y a une variation de ':
 					traduit = "There's a variation of ";

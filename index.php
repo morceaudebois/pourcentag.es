@@ -18,6 +18,10 @@
 	<meta name="msapplication-TileColor" content="#f1f4ff">
 	<meta name="theme-color" content="#ffffff">
 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="pourcentag.es">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
 </head>
 
 <body>
@@ -70,7 +74,7 @@
 
 	<footer>
 		<p class="trn">Vous êtes le visiteur n°</p>
-		<div class="compteur"><?= $count ?></div>
+		<div class="compteur"><span>444</span></div>
 		<p class="trn">pourcentag.es est une expérience <a href="https://dribbble.com/tags/neomorphism" target="_blank" >neuomorphique</a>, un mariage d’interfaces du <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">passé</a> et du <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">présent</a>.</p>
 		<p class="trn">Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez <a href="https://www.buymeacoffee.com/Tahoe" target="_blank">m’offrir un café</a>. ☕️</p>
 
