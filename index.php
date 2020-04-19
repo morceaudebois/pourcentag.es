@@ -2,11 +2,21 @@
 <html lang="fr">
 <head>
 	<title>Pourcentage</title>
-	<meta name="description" content="" />
+	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Calcul d'augmentation, de valeur et d'évolution." />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
 	<link rel="stylesheet" href="src/css/style.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#9d79e7">
+	<meta name="apple-mobile-web-app-title" content="pourcentag.es">
+	<meta name="application-name" content="pourcentag.es">
+	<meta name="msapplication-TileColor" content="#f1f4ff">
+	<meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -71,7 +81,6 @@
 		</a>
 	</footer>
 
-	<script src="src/js/lang.js"></script>
 	<script src="src/js/scripts.js"></script>
 
 </body>
