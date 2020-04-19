@@ -1,6 +1,8 @@
 id = name => document.getElementById(name);
 cl = name => document.getElementsByClassName(name);
 
+lang();
+
 // Pour remplacer les virgules par des points
 function comReplace(value) {
 	return value.replace(",", ".");
@@ -175,7 +177,81 @@ function calcul(type,x,y) {
 	}
 }
 
-
-
 let inputs = document.querySelectorAll(".input");
 inputs.forEach(launcher);
+
+
+
+
+function lang() {
+	// pour savoir le langage du navigateur
+	const userLang = navigator.language || navigator.userLanguage;
+	// ceux là n'ont pas besoin de traduction
+	const fr = ["fr-CH", "fr-FR", "fr-CA", "fr-BE"];
+	// vise tous les éléments à traduire
+	const trns = document.querySelectorAll(".trn");
+
+	// si la langue du user est pas le français
+	if (!fr.includes(userLang)) {
+		// lance la traduction pour chaque élément
+		trns.forEach(tradEn);
+
+		function tradEn(toTrad) {
+			// récupère le texte de l'élément
+			let english = toTrad.innerText;
+			let traduit;
+
+			// regarde si la traduction existe et l'affecte à $traduit
+			switch (english) {
+				case 'Calcul de pourcentages simple et efficace':
+					traduit = "Simple and efficient percentage calculator";
+					break;
+				case 'Calcul de valeur':
+					traduit = "Value calculation";
+					break;
+				case 'Calcul de quantité': 
+					traduit = "Quantity calculation";
+					break;
+				case "Calcul d'évolution":
+					traduit = "Evolution calculation";
+					break;
+				case "Vous êtes le visiteur n°":
+					traduit = "You're visitor n°";
+					break;
+				case 'pourcentag.es est une expérience neuomorphique, un mariage d’interfaces du passé et du présent.':
+					traduit = "pourcentag.es is a <a href='https://dribbble.com/tags/neomorphism' target='_blank'>neomorphic</a> experiment, a combination of interfaces from the <a href='https://fr.wikipedia.org/wiki/Skeuomorphisme' target='_blank'>past</a> and the <a href='https://fr.wikipedia.org/wiki/Flat_design' target='_blank'>present</a>.";
+					break;
+				case "Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez m’offrir un café. ☕️":
+					traduit = "If you like the idea or find it useful, you can <a href='https://www.buymeacoffee.com/Tahoe' target='_blank'>buy me a coffee</a>. ☕️";
+					break;
+				case 'de':
+					traduit = "of";
+					break;
+				case 'font':
+					traduit = "equal to";
+					break;
+				case 'représente':
+					traduit = "represents";
+					break;
+				case 'Il y a une variation de ':
+					traduit = "There's a variation of ";
+					break;
+				case 'entre':
+					traduit = "between";
+					break;
+				case 'et':
+					traduit = "and";
+			}
+
+			// insère la traduction seulement si elle existe
+			if (traduit) {
+				toTrad.innerHTML = traduit;
+			}
+		}
+	}
+}
+
+
+
+
+
