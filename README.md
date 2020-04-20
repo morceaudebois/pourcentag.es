@@ -10,7 +10,7 @@
 ## Features
 * Value, quantity and evolution calculations
 * Beautiful dark mode
-* Automatic language changing based on your browser (currently supports french and english)
+* Automatic language switching based on your browser settings (currently supports french and english)
 * Lightweight
 * Minimal, neomorphic design
 * Old school visitor counter
