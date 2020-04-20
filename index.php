@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>Pourcentage</title>
+	<title>pourcentag.es · Calculer un pourcentage</title>
 	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Calcul d'augmentation, de valeur et d'évolution." />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -74,7 +74,7 @@
 
 	<footer>
 		<p class="trn">Vous êtes le visiteur n°</p>
-		<div class="compteur"><span>444</span></div>
+		<div class="compteur"><span><?= $count ?></span></div>
 		<p class="trn">pourcentag.es est une expérience <a href="https://dribbble.com/tags/neomorphism" target="_blank" >neuomorphique</a>, un mariage d’interfaces du <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">passé</a> et du <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">présent</a>.</p>
 		<p class="trn">Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez <a href="https://www.buymeacoffee.com/Tahoe" target="_blank">m’offrir un café</a>. ☕️</p>
 

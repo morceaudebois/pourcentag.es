@@ -187,7 +187,7 @@ function lang() {
 	// pour savoir le langage du navigateur
 	const userLang = navigator.language || navigator.userLanguage;
 	// ceux là n'ont pas besoin de traduction
-	const fr = ["fr-CH", "fr-FR", "fr-CA", "fr-BE"];
+	const fr = ["fr", "fr-CH", "fr-FR", "fr-CA", "fr-BE"];
 	// vise tous les éléments à traduire
 	const trns = document.querySelectorAll(".trn");
 
