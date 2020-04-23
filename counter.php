@@ -6,8 +6,12 @@ session_start();
 // Add correct path to your countlog.txt file.
 $path = 'countlog.txt';
 
+if (!file_exists($path)) {
+	$file  = fopen( $path, 'w' );
+	fwrite( $file, "0" );
+}
+
 // Opens countlog.txt to read the number of hits.
-$file  = fopen( $path, 'r' );
 $count = fgets( $file, 1000 );
 fclose( $file );
 
