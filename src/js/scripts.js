@@ -219,7 +219,7 @@ function lang() {
 					traduit = "You're visitor n°";
 					break;
 				case 'pourcentag.es est une expérience neuomorphique, un mariage d’interfaces du passé et du présent.':
-					traduit = "pourcentag.es is a <a href='https://dribbble.com/tags/neomorphism' target='_blank'>neuomorphic</a> experiment, a combination of interfaces from the <a href='https://en.wikipedia.org/wiki/Skeuomorph' target='_blank'>past</a> and the <a href='https://en.wikipedia.org/wiki/Flat_design' target='_blank'>present</a>.";
+					traduit = "pourcentag.es is a <a href='https://dribbble.com/tags/neomorphism' target='_blank'>neumorphic</a> experiment, a combination of interfaces from the <a href='https://en.wikipedia.org/wiki/Skeuomorph' target='_blank'>past</a> and the <a href='https://en.wikipedia.org/wiki/Flat_design' target='_blank'>present</a>.";
 					break;
 				case "Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez m’offrir un café. ☕️":
 					traduit = "If you like the idea or find it useful, you can <a href='https://www.buymeacoffee.com/Tahoe' target='_blank'>buy me a coffee</a>. ☕️";
