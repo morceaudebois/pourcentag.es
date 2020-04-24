@@ -1,4 +1,5 @@
 
 .DS_Store
 config.codekit3
+countlog.txt
 src/js/scripts-min.js

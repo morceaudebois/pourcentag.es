@@ -27,6 +27,7 @@
     <meta property="og:title" content="pourcentag.es · Modern percentage calculator">
     <meta property="og:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
     <meta property="og:image" content="https://pourcentag.es/src/images/preview.jpg">
+    <meta property="og:type" content="website"/>
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
