@@ -196,6 +196,7 @@ function lang() {
 	if (!fr.includes(userLang)) {
 		// définit le html lang
 		document.getElementsByTagName('html')[0].setAttribute('lang',"en");
+		document.title = "pourcentag.es · Simple and efficient percentage calculator";
 		
 		// lance la traduction pour chaque élément
 		trns.forEach(tradEn);
