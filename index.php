@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+	
 	<title>pourcentag.es · Calculer un pourcentage</title>
 	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Calcul d'augmentation, de valeur et d'évolution." />
 	<meta charset="utf-8">
@@ -12,6 +13,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
+	<link rel="canonical" href="https://pourcentag.es" />
 	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#9d79e7">
 	<meta name="apple-mobile-web-app-title" content="pourcentag.es">
 	<meta name="application-name" content="pourcentag.es">
@@ -21,6 +23,25 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="pourcentag.es">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <meta property="og:title" content="pourcentag.es · Modern percentage calculator">
+    <meta property="og:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
+    <meta property="og:image" content="https://pourcentag.es/src/images/preview.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
+    <meta property="twitter:title" content="pourcentag.es · Modern percentage calculator">
+	<meta property="twitter:image" content="https://pourcentag.es/src/images/preview.jpg">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684433-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-136684433-4');
+	</script>
 
 </head>
 
@@ -32,7 +53,7 @@
 		<img src="src/images/logo.svg"  alt="logo">
 	</picture>
 
-	<h2 class="trn">Calcul de pourcentages simple et efficace</h2>
+	<h1 class="trn">Calcul de pourcentages simple et efficace</h1>
 
 	<section>
 		<h3 class="trn">Calcul de valeur</h3>

@@ -183,6 +183,7 @@ inputs.forEach(launcher);
 
 
 
+
 function lang() {
 	// pour savoir le langage du navigateur
 	const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
@@ -193,6 +194,9 @@ function lang() {
 
 	// si la langue du user est pas le français
 	if (!fr.includes(userLang)) {
+		// définit le html lang
+		document.getElementsByTagName('html')[0].setAttribute('lang',"en");
+		
 		// lance la traduction pour chaque élément
 		trns.forEach(tradEn);
 
