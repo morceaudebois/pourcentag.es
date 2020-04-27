@@ -25,7 +25,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
 
     <meta property="og:title" content="pourcentag.es · Modern percentage calculator">
-    <meta property="og:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
+    <meta property="og:description" content="Calculate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
     <meta property="og:image" content="https://pourcentag.es/src/images/preview.jpg">
     <meta property="og:type" content="website"/>
 
