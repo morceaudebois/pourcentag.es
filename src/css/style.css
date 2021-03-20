@@ -44,9 +44,9 @@ section .calcul .input.error.full:after { color: #f6f8ff; }
 
 section .calcul.quant .resultat:before { content: "20%"; }
 
-section .calcul.ajout .resultat:before { content: "120%"; }
+section .calcul.ajout .resultat:before { content: "120"; }
 
-section .calcul.retrait .resultat:before { content: "80%"; }
+section .calcul.retrait .resultat:before { content: "80"; }
 
 section .calcul.solde .resultat:before { content: "8"; }
 
