@@ -125,11 +125,24 @@ function processor(input) {
 		} else {
 			reset(zInput,x,y);
 		}
+	} else if (parent.classList.contains("ajout")) {
+		if (x && y) {
+			processResult(calcul("ajout", x, y), false, zInput);
+		} else {
+			reset(zInput,x,y);
+		}
+	} else if (parent.classList.contains("retrait")) {
+		if (x && y) {
+			processResult(calcul("retrait", x, y), false, zInput);
+		} else {
+			reset(zInput,x,y);
+		}
 	}
 }
 
 // Limite les décimales à 6, inscrit le résultat et ajoute la class .valid
 function processResult(value, isPercent, resultInput) {
+	console.log(value);
 	let result = parseFloat(value.toFixed(6));
 
 	if (isPercent) {
@@ -169,11 +182,16 @@ function reset(toReset, x, y) {
 function calcul(type,x,y) {
 	switch(type) {
 		case "solde":
+			console.log(x);
 			return y * (x / 100);
 		case "quant":
 			return (100 * x) / y;
 		case "evo":
 			return ((y - x) / x) * 100;
+		case "ajout":
+			return parseFloat(x) + y * (x / 100);
+		case "retrait":
+			return parseFloat(x) - y * (x / 100);
 	}
 }
 
@@ -246,6 +264,13 @@ function lang() {
 					break;
 				case 'et':
 					traduit = "and";
+					break;
+				case 'Ajouter un pourcentage':
+					traduit = "Add a percentage";
+					break;
+				case 'Soustraire un pourcentage':
+					traduit = "Deduct a percentage";
+					break;
 			}
 
 			// insère la traduction seulement si elle existe

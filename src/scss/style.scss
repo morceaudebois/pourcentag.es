@@ -123,6 +123,14 @@ section {
 			content: "20%";
 		}
 
+		&.ajout .resultat:before {
+			content: "120%";
+		}
+
+		&.retrait .resultat:before {
+			content: "80%";
+		}
+
 		&.solde .resultat:before {
 			content: "8";
 		}

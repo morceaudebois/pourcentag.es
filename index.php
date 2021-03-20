@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 	
-	<title>pourcentag.es · Calculer un pourcentage</title>
-	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Calcul d'augmentation, de valeur et d'évolution." />
+	<title>Calculer un pourcentage · pourcentag.es</title>
+	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Ajoutez et soustrayez, calcul d'augmentation, de valeur et d'évolution." />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
@@ -57,6 +57,32 @@
 	<h1 class="trn">Calcul de pourcentages simple et efficace</h1>
 
 	<section>
+		<h3 class="trn">Ajouter un pourcentage</h3>
+		<div class="calcul ajout">			
+			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
+			<span class="trn">+</span>
+			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
+
+			<span class="trn">font</span>
+
+			<span id="resultat" class="resultat"></span>
+		</div>
+	</section>
+
+	<section>
+		<h3 class="trn">Soustraire un pourcentage</h3>
+		<div class="calcul retrait">			
+			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
+			<span class="trn">-</span>
+			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
+
+			<span class="trn">font</span>
+
+			<span id="resultat" class="resultat"></span>
+		</div>
+	</section>
+
+	<section>
 		<h3 class="trn">Calcul de valeur</h3>
 		<div class="calcul solde">
 			<span class="input pourcent" id="x" placeholder="10" contenteditable="true" ></span>
@@ -93,6 +119,8 @@
 			<span class="input" id="y" placeholder="46" contenteditable="true"></span>
 		</div>
 	</section>
+
+	
 
 	<footer>
 		<p class="trn">Vous êtes le visiteur n°</p>
