@@ -43,6 +43,18 @@ function launcher(input) {
 		parent.classList.remove("focus");
 	});
 
+	function isItFull() {
+		// indique si les inputs sont pleins/vides (pour  le % de la bonne couleur)
+		if (input.innerText.length > 0) {
+			input.classList.add("full");
+		} else {
+			input.classList.remove("full");
+		}
+
+		// lance le calcul
+		processor(input);
+	}
+
 	// filtre les copiés collés
 	input.addEventListener('paste', function(event) {
 
@@ -72,20 +84,15 @@ function launcher(input) {
         if (numbersOnly === "") {
         	error(input);
         }
+
+		isItFull();
 	});
 
 	// à chaque entrée de texte
 	input.addEventListener('input', function(e) {
-		// indique si les inputs sont pleins/vides (pour  le % de la bonne couleur)
-		if (input.innerText.length > 0) {
-			input.classList.add("full");
-		} else {
-			input.classList.remove("full");
-		}
-
-		// lance le calcul
-		processor(input);
+		isItFull();
 	});
+
 }
 
 function processor(input) {
