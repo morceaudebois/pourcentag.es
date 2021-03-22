@@ -149,7 +149,7 @@ function processor(input) {
 
 // Limite les décimales à 6, inscrit le résultat et ajoute la class .valid
 function processResult(value, isPercent, resultInput) {
-	
+
 	let result = parseFloat(value.toFixed(6));
 
 	if (isPercent) {
@@ -189,7 +189,6 @@ function reset(toReset, x, y) {
 function calcul(type,x,y) {
 	switch(type) {
 		case "solde":
-			console.log(x);
 			return y * (x / 100);
 		case "quant":
 			return (100 * x) / y;
