@@ -277,7 +277,7 @@ inputs.forEach(launcher);
 			}
 
 			// insère la traduction seulement si elle existe
-			if (traduit) toTrad.innerHTML = traduit;
+			// if (traduit) toTrad.innerHTML = traduit;
 		}
 	}
 }())

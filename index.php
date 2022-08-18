@@ -37,11 +37,11 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136684433-4"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	  gtag('config', 'UA-136684433-4');
+		gtag('config', 'UA-136684433-4');
 	</script>
 
 </head>
@@ -54,68 +54,68 @@
 		<img src="src/images/logo.svg"  alt="logo">
 	</picture>
 
-	<h1 class="trn">Calcul de pourcentages simple et efficace</h1>
+	<h1>Simple and efficient percentage calculator</h1>
 
 	<section>
-		<h3 class="trn">Ajouter un pourcentage</h3>
+		<h3>Add a percentage</h3>
 		<div class="calcul ajout">			
 			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
-			<span class="trn">+</span>
+			<span>+</span>
 			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
 
-			<span class="trn">font</span>
+			<span>is</span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3 class="trn">Soustraire un pourcentage</h3>
+		<h3>Deduct a percentage</h3>
 		<div class="calcul retrait">			
 			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
-			<span class="trn">-</span>
+			<span>-</span>
 			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
 
-			<span class="trn">font</span>
+			<span>is</span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3 class="trn">Calcul de valeur</h3>
+		<h3>Value calculation</h3>
 		<div class="calcul solde">
 			<span class="input pourcent" id="x" placeholder="10" contenteditable="true" ></span>
 
-			<span class="trn">de</span>
+			<span>of</span>
 
 			<span class="input" id="y" placeholder="80" contenteditable="true"></span>
 
-			<span class="trn">font</span>
+			<span>is</span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3 class="trn">Calcul de quantité</h3>
+		<h3>Quantity calculation</h3>
 		<div class="calcul quant">
 			<span class="input" id="x" placeholder="24" contenteditable="true"></span>
-			<span class="trn">représente</span>
+			<span>is</span>
 			<span id="resultat" class="resultat"></span>
-			<span class="trn">de</span>
+			<span>of</span>
 			<span class="input" id="y" placeholder="120" contenteditable="true"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3 class="trn">Calcul d'évolution</h3>
+		<h3>Evolution calculation</h3>
 		<div class="calcul evo">
-			<span id="phrase" class="trn">Il y a une variation de </span>
+			<span id="phrase">There's a variation of </span>
 			<span id="resultat" class="resultat"></span>
-			<span class="trn">entre</span>
+			<span>between</span>
 			<span class="input" id="x" placeholder="23" contenteditable="true"></span>
-			<span class="trn">et</span>
+			<span>and</span>
 			<span class="input" id="y" placeholder="46" contenteditable="true"></span>
 		</div>
 	</section>
@@ -123,10 +123,12 @@
 	
 
 	<footer>
-		<p class="trn">Vous êtes le visiteur n°</p>
+		<p>You're visitor n°</p>
 		<div class="compteur"><span><?= $count ?></span></div>
-		<p class="trn">pourcentag.es est une expérience <a href="https://dribbble.com/tags/neomorphism" target="_blank" >neuomorphique</a>, un mariage d’interfaces du <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">passé</a> et du <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">présent</a>.</p>
-		<p class="trn">Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez <a href="https://www.buymeacoffee.com/Tahoe" target="_blank">m’offrir un café</a>. ☕️</p>
+
+		<p>pourcentag.es is a <a href="https://dribbble.com/tags/neomorphism" target="_blank" >neumorphic</a> experiment, a combination of interfaces from the <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">past</a> and the <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">present</a>.</p>
+
+		<p>If you like the idea or find it useful, you can  <a href="https://www.buymeacoffee.com/Tahoe" target="_blank">buy me a coffee</a>. ☕️</p>
 
 		<a href="https://github.com/Tahoooe/pourcentage" id="link" target="_blank">
 			<svg width="18" height="18" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
