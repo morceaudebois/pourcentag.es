@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 	
-	<title>Calculer un pourcentage · pourcentag.es</title>
-	<meta name="description" content="Calculez vos pourcentages dans une interface minimaliste et épurée. Ajoutez et soustrayez, calcul d'augmentation, de valeur et d'évolution." />
+	<title><?= _('Calculer un pourcentage'); ?> · pourcentag.es</title>
+	<meta name="description" content="<?php _(`Calculez vos pourcentages dans une interface minimaliste et épurée. Ajoutez et soustrayez, calcul d'augmentation, de valeur et d'évolution.`); ?>" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
@@ -23,15 +23,15 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="pourcentag.es">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-
-    <meta property="og:title" content="pourcentag.es · Modern percentage calculator">
-    <meta property="og:description" content="Calculate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
+	
+    <meta property="og:title" content="pourcentag.es · <?= _('Modern percentage calculator') ?>">
+    <meta property="og:description" content="<?= _('Calculate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.') ?>">
     <meta property="og:image" content="https://pourcentag.es/src/images/preview.jpg">
     <meta property="og:type" content="website"/>
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:description" content="Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.">
-    <meta property="twitter:title" content="pourcentag.es · Modern percentage calculator">
+    <meta property="twitter:description" content="<?= _('Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.') ?>">
+    <meta property="twitter:title" content="pourcentag.es · <?= _('Modern percentage calculator') ?>">
 	<meta property="twitter:image" content="https://pourcentag.es/src/images/preview.jpg">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
