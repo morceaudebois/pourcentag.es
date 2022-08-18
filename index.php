@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 	
-	<title><?= _('Calculer un pourcentage'); ?> · pourcentag.es</title>
-	<meta name="description" content="<?php _(`Calculez vos pourcentages dans une interface minimaliste et épurée. Ajoutez et soustrayez, calcul d'augmentation, de valeur et d'évolution.`); ?>" />
+	<title><?= _('Calculate percentages'); ?> · pourcentag.es</title>
+	<meta name="description" content="<?php _(`Calculate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.`); ?>" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	
@@ -30,7 +30,7 @@
     <meta property="og:type" content="website"/>
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:description" content="<?= _('Calcultate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.') ?>">
+    <meta property="twitter:description" content="<?= _('Calculate percentages in a minimalist modern interface. Use common phrases to add a percentage, calculate values and evolutions.') ?>">
     <meta property="twitter:title" content="pourcentag.es · <?= _('Modern percentage calculator') ?>">
 	<meta property="twitter:image" content="https://pourcentag.es/src/images/preview.jpg">
 
@@ -54,68 +54,68 @@
 		<img src="src/images/logo.svg"  alt="logo">
 	</picture>
 
-	<h1>Simple and efficient percentage calculator</h1>
+	<h1><?= _('Simple and efficient percentage calculator') ?></h1>
 
 	<section>
-		<h3>Add a percentage</h3>
+		<h3><?= _('Add a percentage') ?></h3>
 		<div class="calcul ajout">			
 			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
 			<span>+</span>
 			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
 
-			<span>is</span>
+			<span><?= _('is') ?></span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3>Deduct a percentage</h3>
+		<h3><?= _('Deduct a percentage') ?></h3>
 		<div class="calcul retrait">			
 			<span class="input" id="x" placeholder="100" contenteditable="true"></span>
 			<span>-</span>
 			<span class="input pourcent" id="y" placeholder="20" contenteditable="true"></span>
 
-			<span>is</span>
+			<span><?= _('is') ?></span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3>Value calculation</h3>
+		<h3><?= _('Value calculation') ?></h3>
 		<div class="calcul solde">
 			<span class="input pourcent" id="x" placeholder="10" contenteditable="true" ></span>
 
-			<span>of</span>
+			<span><?= _('of') ?></span>
 
 			<span class="input" id="y" placeholder="80" contenteditable="true"></span>
 
-			<span>is</span>
+			<span><?= _('is') ?></span>
 
 			<span id="resultat" class="resultat"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3>Quantity calculation</h3>
+		<h3><?= _('Quantity calculation') ?></h3>
 		<div class="calcul quant">
 			<span class="input" id="x" placeholder="24" contenteditable="true"></span>
-			<span>is</span>
+			<span><?= _('is') ?></span>
 			<span id="resultat" class="resultat"></span>
-			<span>of</span>
+			<span><?= _('of') ?></span>
 			<span class="input" id="y" placeholder="120" contenteditable="true"></span>
 		</div>
 	</section>
 
 	<section>
-		<h3>Evolution calculation</h3>
+		<h3><?= _('Evolution calculation') ?></h3>
 		<div class="calcul evo">
-			<span id="phrase">There's a variation of </span>
+			<span id="phrase"><?= _('There\'s a variation of') ?> </span>
 			<span id="resultat" class="resultat"></span>
-			<span>between</span>
+			<span><?= _('between') ?></span>
 			<span class="input" id="x" placeholder="23" contenteditable="true"></span>
-			<span>and</span>
+			<span><?= _('and') ?></span>
 			<span class="input" id="y" placeholder="46" contenteditable="true"></span>
 		</div>
 	</section>
@@ -123,12 +123,12 @@
 	
 
 	<footer>
-		<p>You're visitor n°</p>
+		<p><?= _('You\'re visitor n°') ?></p>
 		<div class="compteur"><span><?= $count ?></span></div>
 
-		<p>pourcentag.es is a <a href="https://dribbble.com/tags/neomorphism" target="_blank" >neumorphic</a> experiment, a combination of interfaces from the <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank">past</a> and the <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank">present</a>.</p>
+		<p><?= _('pourcentag.es is a') ?> <a href="https://dribbble.com/tags/neomorphism" target="_blank" ><?= _('neumorphic') ?></a> <?= _('experiment, a combination of interfaces from the') ?> <a href="https://fr.wikipedia.org/wiki/Skeuomorphisme" target="_blank"><?= _('past') ?></a> <?= _('and the') ?> <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank"><?= _('present') ?></a>.</p>
 
-		<p>If you like the idea or find it useful, you can  <a href="https://www.buymeacoffee.com/Tahoe" target="_blank">buy me a coffee</a>. ☕️</p>
+		<p><?= _('If you like the idea or find it useful, you can') ?> <a href="https://www.buymeacoffee.com/Tahoe" target="_blank"><?= _('buy me a coffee') ?></a>. ☕️</p>
 
 		<a href="https://github.com/Tahoooe/pourcentage" id="link" target="_blank">
 			<svg width="18" height="18" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
