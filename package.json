@@ -1,0 +1,22 @@
+{
+  "name": "pourcentag.es",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <img src=\"https://raw.githubusercontent.com/Tahoooe/pourcentages/master/src/images/logo.svg\" width=\"50%\"></img>",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch --no-source-map src/scss/style.scss src/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morceaudebois/pourcentag.es.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morceaudebois/pourcentag.es/issues"
+  },
+  "homepage": "https://github.com/morceaudebois/pourcentag.es#readme",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}

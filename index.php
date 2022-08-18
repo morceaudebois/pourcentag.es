@@ -9,12 +9,12 @@
 	
 	<link rel="stylesheet" href="src/css/style.css">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="src/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="src/images/favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
 	<link rel="canonical" href="https://pourcentag.es" />
-	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#9d79e7">
+	<link rel="mask-icon" href="src/images/safari-pinned-tab.svg" color="#9d79e7">
 	<meta name="apple-mobile-web-app-title" content="pourcentag.es">
 	<meta name="application-name" content="pourcentag.es">
 	<meta name="msapplication-TileColor" content="#f1f4ff">

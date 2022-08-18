@@ -1,8 +1,6 @@
 id = name => document.getElementById(name);
 cl = name => document.getElementsByClassName(name);
 
-lang();
-
 // Pour remplacer les virgules par des points
 function comReplace(value) {
 	return value.replace(",", ".");
@@ -206,10 +204,9 @@ inputs.forEach(launcher);
 
 
 
-
-
-function lang() {
-	// pour savoir le langage du navigateur
+	
+(function() {
+    // pour savoir le langage du navigateur
 	const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
 	// ceux là n'ont pas besoin de traduction
 	const fr = ["fr", "fr-ch", "fr-fr", "fr-ca", "fr-be"];
@@ -280,14 +277,7 @@ function lang() {
 			}
 
 			// insère la traduction seulement si elle existe
-			if (traduit) {
-				toTrad.innerHTML = traduit;
-			}
+			if (traduit) toTrad.innerHTML = traduit;
 		}
 	}
-}
-
-
-
-
-
+}())

@@ -3,3 +3,4 @@
 config.codekit3
 countlog.txt
 src/js/scripts-min.js
+node_modules
