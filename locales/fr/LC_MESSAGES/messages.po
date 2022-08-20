@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-08-18 12:28+0200\n"
-"PO-Revision-Date: 2022-08-18 12:28+0200\n"
+"POT-Creation-Date: 2022-08-20 11:35+0200\n"
+"PO-Revision-Date: 2022-08-20 11:36+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -14,22 +14,95 @@ msgstr ""
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: index.php\n"
 
-#: index.php:5
-msgid "Calculer un pourcentage"
-msgstr ""
+#: index.php:19
+msgid "Calculate percentages"
+msgstr "Calculer vos pourcentages"
 
-#: index.php:27 index.php:34
-msgid "Modern percentage calculator"
-msgstr ""
-
-#: index.php:28
+#: index.php:20 index.php:42 index.php:47
 msgid ""
 "Calculate percentages in a minimalist modern interface. Use common phrases "
 "to add a percentage, calculate values and evolutions."
 msgstr ""
+"Calculez vos pourcentages dans une interface minimaliste et épurée. Ajoutez "
+"et soustrayez, calcul d’augmentation, de valeur et d’évolution."
 
-#: index.php:33
-msgid ""
-"Calcultate percentages in a minimalist modern interface. Use common phrases "
-"to add a percentage, calculate values and evolutions."
+#: index.php:41 index.php:48 index.php:60
+msgid "Simple and efficient percentage calculator"
+msgstr "Calcul de pourcentages simple et efficace"
+
+#: index.php:63
+msgid "Add a percentage"
+msgstr "Ajouter un pourcentage"
+
+#: index.php:69 index.php:82 index.php:97 index.php:107
+msgid "is"
+msgstr "font"
+
+#: index.php:76
+msgid "Deduct a percentage"
+msgstr "Soustraire un pourcentage"
+
+#: index.php:89
+msgid "Value calculation"
+msgstr "Calcul de valeur"
+
+#: index.php:93 index.php:109
+msgid "of"
+msgstr "de"
+
+#: index.php:104
+msgid "Quantity calculation"
+msgstr "Calcul de quantité"
+
+#: index.php:115
+msgid "Evolution calculation"
+msgstr "Calcul d’évolution"
+
+#: index.php:117
+msgid "There's a variation of"
+msgstr "Il y a une variation de"
+
+#: index.php:119
+msgid "between"
+msgstr "entre"
+
+#: index.php:121
+msgid "and"
+msgstr "et"
+
+#: index.php:129
+msgid "You're visitor n°"
+msgstr "Vous êtes le visiteur n°"
+
+#: index.php:132
+msgid "pourcentag.es is a"
+msgstr "pourcentag.es est une expérience"
+
+#: index.php:132
+msgid "neumorphic "
+msgstr "neuomorphique"
+
+#: index.php:132
+msgid "experiment, a combination of interfaces from the"
+msgstr ", un mariage d’interfaces du"
+
+#: index.php:132
+msgid "past"
+msgstr "passé"
+
+#: index.php:132
+msgid "and the"
+msgstr "et du"
+
+#: index.php:132
+msgid "present"
+msgstr "présent"
+
+#: index.php:134
+msgid "If you like the idea or find it useful, you can"
 msgstr ""
+"Si vous aimez l’idée ou simplement que vous le trouvez utile, vous pouvez"
+
+#: index.php:134
+msgid "buy me a coffee"
+msgstr "m’offrir un café"
