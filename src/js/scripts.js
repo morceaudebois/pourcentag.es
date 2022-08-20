@@ -201,3 +201,4 @@ function calcul(type,x,y) {
 
 let inputs = document.querySelectorAll(".input");
 inputs.forEach(launcher);
+
