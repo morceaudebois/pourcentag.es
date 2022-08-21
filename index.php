@@ -140,14 +140,14 @@
 		</a>
 	</footer>
 
-	<hr id="sep">
-
-	<div class="obj"></div>
+	
 
 	<div id="notAIGeneratedText">
-		<h2>You don't wanna read this.</h2>
+		<hr id="sep">
 
-		<p><i>Google won't reference well small websites like these unless they have tons of text and keywords. I'm not really into those since pourcentag.es is made to be easy to use and not get in your way. This is some AI generated text and images you shouldn't read but should please the SEO gods. Please hide it using the big red button and it won't appear anymore.</i></p>
+		<h2>⚠️ You don't wanna read this. ⚠️</h2>
+
+		<p><i>Small websites like these won't get referenced well by Google unless they have tons of text and keywords. I'm not really into those since pourcentag.es is designed to be easy to use and not get in your way. Here's some AI generated text and images you shouldn't read but should please the SEO gods. Please hide it using the big red button and it won't appear anymore.</i></p>
 
 		<button class="pushable">
 			<span class="shadow"></span>
@@ -165,7 +165,7 @@
 
 		<img src="src/images/DALL·E 2022-08-21 14.36.40 - a photo of a czechoslovakian wolfdog studying maths.jpg" alt="You shouldn't think about percentages too much">
 
-		<p>A lot of people find numbers and maths daunting, but I think that with the right tools, everyone can become a math whiz! Pourcentages is one of those tools that makes math fun and easy. It's a minimalistic percentage calculator that allows you to do all kinds of calculations with ease. Plus, it looks great and is really easy to use. I highly recommend it for anyone who wants to improve their math skills!</p>
+		<p>A lot of people find numbers and maths daunting, but I think that with the right tools, everyone can become a math whiz! pourcentag.es is one of those tools that makes math fun and easy. It's a minimalistic percentage calculator that allows you to do all kinds of calculations with ease. Plus, it looks great and is really easy to use. I highly recommend it for anyone who wants to improve their math skills!</p>
 
 		<p>pourcentag.es is a simple and efficient percentage calculator that will make your life easier. With its easy-to-use interface and beautiful design, pourcentag.es will help you get the most out of your calculations.</p>
 

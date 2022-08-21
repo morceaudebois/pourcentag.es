@@ -290,6 +290,16 @@ footer {
 	max-width: $pageWidth;
 	margin: auto;
 	margin-bottom: 5em;
+	max-height: 2600px;
+	transition: all 650ms ease-in-out;
+	opacity: 1;
+	overflow: hidden;
+
+	&.dissapearing {
+		max-height: 0px;
+		margin-bottom: 0;
+		opacity: 0;
+	}
 
 	img {
 		display: block;

@@ -202,3 +202,22 @@ function calcul(type,x,y) {
 let inputs = document.querySelectorAll(".input");
 inputs.forEach(launcher);
 
+
+document.querySelector('.pushable .front').addEventListener("mouseup", function() {
+	document.querySelector('#notAIGeneratedText').classList.add('dissapearing');
+
+	// deletes text after clicking the button
+	setTimeout(function() {
+		document.querySelector('#notAIGeneratedText').remove()
+	}, 650);
+
+	// sets button click in local storage for later
+	localStorage.setItem("pourcentagesSeoText", "false");
+});
+
+// hides SEO text on load if button was clicked before
+document.addEventListener("DOMContentLoaded", function() {
+	if (localStorage.getItem("pourcentagesSeoText")) {
+		document.querySelector('#notAIGeneratedText').remove()
+	}
+});
