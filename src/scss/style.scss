@@ -290,6 +290,13 @@ footer {
 	max-width: $pageWidth;
 	margin: auto;
 	margin-bottom: 5em;
+
+	img {
+		display: block;
+		width: 20em;
+		margin: auto;
+		border-radius: 15px;
+	}
 }
 
 

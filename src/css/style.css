@@ -269,6 +269,12 @@ footer #link {
   margin: auto;
   margin-bottom: 5em;
 }
+#notAIGeneratedText img {
+  display: block;
+  width: 20em;
+  margin: auto;
+  border-radius: 15px;
+}
 
 .pushable {
   position: relative;
