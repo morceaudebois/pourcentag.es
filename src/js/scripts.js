@@ -221,3 +221,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.querySelector('#notAIGeneratedText').remove()
 	}
 });
+
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('service-worker.js');
+}

@@ -14,6 +14,7 @@
         url('../fonts/Futura-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -22,6 +23,7 @@
          url('../fonts/ds-digital-bold_allfont.net-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @mixin transition {

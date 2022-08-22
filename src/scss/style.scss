@@ -3,13 +3,15 @@
 #logo {
 	padding-top: 4em;
 	max-width: 600px;
+	width: 100%;
+	height: auto;
 	margin: auto;
 	display: block;
-	-webkit-user-drag: none;
-	-khtml-user-drag: none;
-	-moz-user-drag: none;
-	-o-user-drag: none;
-	user-drag: none;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 section {
@@ -28,7 +30,7 @@ section {
 	border: 1px solid rgba(205, 212, 219, .8);
 	min-width: 300px;
 
-	h3 {
+	h2 {
 		margin-block-start: 0em;
 		text-align: center;
 		font-size: 1.5em;
@@ -270,7 +272,7 @@ footer {
 		}
 	}
 
-	#link {
+	#githubLink {
 		display: block;
 		position: relative;
 		top: 1em;
@@ -279,21 +281,17 @@ footer {
 	}
 }
 
-#sep {
-	max-width: $pageWidth;
-	margin: auto;
-	margin-top: 3em;
-	margin-bottom: 3em;
-}
+
 
 #notAIGeneratedText {
 	max-width: $pageWidth;
 	margin: auto;
 	margin-bottom: 5em;
-	max-height: 2600px;
+	max-height: 2800px;
 	transition: all 650ms ease-in-out;
 	opacity: 1;
 	overflow: hidden;
+	font-size: .9em;
 
 	&.dissapearing {
 		max-height: 0px;
@@ -301,15 +299,23 @@ footer {
 		opacity: 0;
 	}
 
+	#sep {
+		max-width: $pageWidth;
+		margin: auto;
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
+
 	img {
 		display: block;
 		width: 20em;
+		height: auto;
 		margin: auto;
 		border-radius: 15px;
 	}
 }
 
-
+// big red button shamelessly stolen here https://www.joshwcomeau.com/animation/3d-button/
 .pushable {
 	position: relative;
 	border: none;
@@ -331,7 +337,7 @@ footer {
 
 	&:hover .front {
 		transform: translateY(-6px);
-		transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+		transition: transform 250ms cutc-bezier(.3, .7, .4, 1.5);
 	}
 
 	&:active .front {

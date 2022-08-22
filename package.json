@@ -4,7 +4,7 @@
   "description": "<p align=\"center\">   <img src=\"https://raw.githubusercontent.com/Tahoooe/pourcentages/master/src/images/logo.svg\" width=\"50%\"></img>",
   "main": "index.js",
   "scripts": {
-    "scss": "sass --watch --no-source-map src/scss/style.scss src/css/style.css"
+    "scss": "sass --watch --no-source-map src/scss/style.scss src/css/style.css --style compressed"
   },
   "repository": {
     "type": "git",
