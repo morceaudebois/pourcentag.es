@@ -250,7 +250,6 @@ footer {
 			text-decoration: none;
 			padding-bottom: 3px;
 			color: $baseFt;
-			text-decoration: none;
 			background-image: linear-gradient(transparent, transparent),linear-gradient(transparent, transparent),linear-gradient(to right, #D087C9, #5961F9);
 			background-repeat: no-repeat;
 			background-position: 120%, 122%, 0 130%;
@@ -292,6 +291,7 @@ footer {
 	opacity: 1;
 	overflow: hidden;
 	font-size: .9em;
+	text-align: justify;
 
 	&.dissapearing {
 		max-height: 0px;
@@ -304,6 +304,9 @@ footer {
 		margin: auto;
 		margin-top: 3em;
 		margin-bottom: 3em;
+		border: 0px;
+		border-top: 1px solid #a4a4a4;
+
 	}
 
 	img {
@@ -325,7 +328,6 @@ footer {
 	outline-offset: 4px;
 	transition: filter 250ms;
 	display: block;
-
 	width: 200px;
 	margin: auto;
 	margin-top: 3em;
