@@ -47,7 +47,7 @@ function launcher(input) {
 		if (input.innerHTML === '<br>') {
 			input.innerHTML = ''
 		}
-		
+
 		// indique si les inputs sont pleins/vides (pour  le % de la bonne couleur)
 		if (input.innerText.length > 0) {
 			input.classList.add("full")
@@ -83,11 +83,12 @@ function launcher(input) {
 			sum = dotCount + commaCount
 		}
 
-        input.innerText = numbersOnly
-
-        if (numbersOnly === "") {
+        if (numbersOnly === "" || numbersOnly.length >= 24) {
         	error(input)
-        }
+			console.info('Your string is either empty or too long.')
+        } else {
+			input.innerText = numbersOnly
+		}
 
 		isItFull()
 	})
@@ -228,3 +229,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 })
 
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('service-worker.js');
+}

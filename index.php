@@ -127,7 +127,7 @@
 		<p><?= _("You're visitor n°") ?></p>
 		<div class="compteur"><span><?= $count ?></span></div>
 
-		<p><?= _("pourcentag.es is a") ?> <a href="https://dribbble.com/tags/neomorphism" target="_blank" title="Check out neomorphism on Dribbble"><?= _("neumorphic ") ?></a><?= _("experiment, a combination of interfaces from the") ?> <a href="https://en.wikipedia.org/wiki/Skeuomorph" target="_blank" title="check out skeuomorphism on Wikipedia"><?= _("past") ?></a> <?= _("and the") ?> <a href="https://fr.wikipedia.org/wiki/Flat_design" target="_blank" title="check out flat design on Wikipedia"><?= _("present") ?></a>.</p>
+		<p><?= _("pourcentag.es is a") ?> <a href="https://dribbble.com/tags/neomorphism" target="_blank" title="Check out neomorphism on Dribbble"><?= _("neumorphic ") ?></a><?= _("experiment, a combination of interfaces from the") ?> <a href="https://wikipedia.org/wiki/Skeuomorph" target="_blank" title="check out skeuomorphism on Wikipedia"><?= _("past") ?></a> <?= _("and the") ?> <a href="https://wikipedia.org/wiki/Flat_design" target="_blank" title="check out flat design on Wikipedia"><?= _("present") ?></a>.</p>
 
 		<p><?= _("If you like the idea or find it useful, you can") ?> <a href="https://ko-fi.com/tahoe" target="_blank" title="Donate to author on Ko-Fi"><?= _("buy me a coffee") ?></a>. ☕️</p>
 
