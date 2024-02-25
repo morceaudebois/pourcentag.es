@@ -173,7 +173,7 @@
 	</div>
 
 
-	<script src="src/js/scripts.js"></script>
+	<script src="src/js/scripts.js?v=2"></script>
 	
 </body>
 </html>
