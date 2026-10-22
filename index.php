@@ -133,6 +133,8 @@
 		<br>
 
 		<p id="signature"><?= _("Made in France by") ?> <a href="https://tahoe.be" target="_blank" title="Visit my personal website"><?= _("Tahoe") ?></a></p>
+		
+		<p>~ Since 2020 ~</p>
 
 		<a href="https://github.com/morceaudebois/pourcentag.es" id="githubLink" target="_blank" aria-label="pourcentag.es github repository" title="check out the source code on GitHub">
 			<svg width="18" height="18" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
