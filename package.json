@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/morceaudebois/pourcentag.es#readme",
   "dependencies": {
-    "sass": "^1.53.0"
+    "sass": "^1.79.6"
   }
 }

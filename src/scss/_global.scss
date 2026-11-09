@@ -9,60 +9,64 @@
 // }
 
 @font-face {
-    font-family: 'Futura Regular';
-    src: url('../fonts/Futura-Regular.woff2') format('woff2'),
-        url('../fonts/Futura-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Futura Regular";
+  src:
+    url("../fonts/Futura-Regular.woff2") format("woff2"),
+    url("../fonts/Futura-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'DS Digital';
-    src: url('../fonts/ds-digital-bold_allfont.net-webfont.woff2') format('woff2'),
-         url('../fonts/ds-digital-bold_allfont.net-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "DSEG";
+  src:
+    url("../fonts/DSEG7ClassicMini-Bold.woff2") format("woff2"),
+    url("../fonts/DSEG7ClassicMini-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @mixin transition {
-    transition-property: background, opacity, box-shadow;
-    transition-duration: .15s;
+  transition-property: background, opacity, box-shadow;
+  transition-duration: 0.15s;
 }
 
 $baseBg: #f6f8ff;
-    $nightBg: #1d1f23;
-$baseFt: #5C6972;
-    $nightFt: #d6e1ef;
-$basePh: rgba(92, 105, 114, .5);
-    $nightPh: rgba(246, 248, 255, .3);
-$baseCt: #383A37;
-    $nightCt: #04B5A7;
-$red: #E51A1A;
-$green: #70FF00;
+$nightBg: #1d1f23;
+$baseFt: #5c6972;
+$nightFt: #d6e1ef;
+$basePh: rgba(92, 105, 114, 0.5);
+$nightPh: rgba(246, 248, 255, 0.3);
+$baseCt: #383a37;
+$nightCt: #04b5a7;
+$red: #e51a1a;
+$green: #70ff00;
 
 $pageWidth: 800px;
 
 body {
-	background-color: $baseBg;
-	color: $baseFt;
-	font-family: Futura Regular, Helvetica Neue, Arial;
-	letter-spacing: .05em;
-    margin: 16px;
+  background-color: $baseBg;
+  color: $baseFt;
+  font-family:
+    Futura Regular,
+    Helvetica Neue,
+    Arial;
+  letter-spacing: 0.05em;
+  margin: 16px;
 }
 
-::selection { background: #ba77b6; color: white; }
+::selection {
+  background: #ba77b6;
+  color: white;
+}
 
 [contenteditable]:focus {
-    outline: 0px solid transparent;
+  outline: 0px solid transparent;
 }
 
 h1 {
-	text-align: center;
-	font-size: 1.5em;
+  text-align: center;
+  font-size: 1.5em;
 }
-
-
-
-
